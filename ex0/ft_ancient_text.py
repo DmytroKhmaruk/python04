@@ -21,7 +21,7 @@ def main() -> None:
     finally:
         if file is not None:
             file.close()
-            print(f"File '{sys.argv[1]}' closed")
+            print(f"File '{sys.argv[1]}' closed.")
 
 
 if __name__ == "__main__":
