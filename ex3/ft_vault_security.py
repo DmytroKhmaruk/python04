@@ -21,21 +21,21 @@ def main() -> None:
     print("=== Cyber Archives Security ===\n")
 
     print("Using 'secure_archive' to read from a nonexistent file:")
-    success, result = secure_archive("/not/existing/file", "read", "")
-    print(f"{success}, {result}\n")
+    result = secure_archive("/not/existing/file", "read", "")
+    print(f"{result}\n")
 
     print("Using 'secure_archive' to read from an inaccessible file:")
-    success, result = secure_archive("/etc/master.passwd", "read", "")
-    print(f"{success}, {result}\n")
+    result = secure_archive("ex3/123.txt", "read", "")
+    print(f"{result}\n")
 
     print("Using 'secure_archive' to read from a regular file:")
-    success, result = secure_archive("ex3/ancient_fragment.txt", "read", "")
-    print(f"{success}, {result}\n")
+    result = secure_archive("ex3/ancient_fragment.txt", "read", "")
+    print(f"{result}\n")
 
     print("Using 'secure_archive' to write previous content to a new file:")
-    success, result = secure_archive("ex3/ancient_fragment.txt", "write",
-                                     "Hello World")
-    print(f"{success}, {result}\n")
+    result = secure_archive("ex3/ancient_fragment.txt", "write",
+                            "Hello World")
+    print(f"{result}\n")
 
 
 if __name__ == "__main__":
